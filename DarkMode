@@ -1,0 +1,19 @@
+ const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    setTheme(localStorage.getItem("theme"));
+  }, []);
+
+  const handleClick = theme => {
+    localStorage.setItem("theme", theme);
+    setTheme(theme);
+  };
+  
+  
+  
+  
+  
+  
+  <button  className='btn btn-primary' onClick={() => handleClick("light")}>Light</button><bt/>
+      <button  className='btn btn-dark' onClick={() => handleClick("dark")}>Dark</button>
+    
